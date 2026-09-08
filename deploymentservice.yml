@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+ apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
   name: ekart-deployment
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ekart
-          image: sarikakalsaitkar42/image1 # Image that will be used to containers in the cluster
+          image: sarikakalsaitkar42/image1:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8070 # The port that the container is running on in the cluster
